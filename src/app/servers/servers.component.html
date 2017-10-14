@@ -1,2 +1,18 @@
-<app-server></app-server>
-<app-server></app-server>
+<!-- <app-server></app-server>
+<app-server></app-server> -->
+
+<button
+    class="button"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">BUTTON</button> <!--  -->
+<p>{{ serverCreationStatus }}</p>
+
+    <!--  "()" indicates to angular we are using event binding.
+    Upon user clicking button, will call the onCreateServer method and affect 
+    the string interpolation below-->
+
+
+    <!-- "[]" indicate to angular we
+    are using property binding. 
+    !allowNewServer means only disabled if false - if 
+    allowNewServer is false button is disabled-->
